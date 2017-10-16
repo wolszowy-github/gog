@@ -1,0 +1,70 @@
+@include font-face(OpenSansBold, "../fonts/opensans-extrabold-webfont");
+@include font-face(OpenSemiBold, "../fonts/opensans-semibold-webfont");
+@include font-face(OpenSansRegular, "../fonts/opensans-regular-webfont");
+@include font-face(OpenSansLight, "../fonts/opensans-light-webfont");
+
+$gog-gray: #666666;
+$gog-dark-gray: #404040;
+
+h1, h2, h3, h4, h5, h6, p, span{
+  font-family: "OpenSansLight";
+  color: $gog-dark-gray;
+}
+
+h1, .h1{
+  color: $gog-dark-gray;
+  font-size: 32px;
+  font-family: "OpenSansLight";
+}
+
+.text-bold{
+  font-family: "OpenSemiBold"
+}
+
+.text-bold-xl{
+  font-family: "OpenSansBold"
+}
+
+.text-regular{
+  font-family: "OpenSansRegular"
+}
+
+.font-size-small{
+  font-size: 12px;
+}
+
+.base-margin-top{
+  margin-top: 45px;
+}
+
+.margin-top-5{
+  margin-top: 5px;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.margin-top-35 {
+  margin-top: 35px;
+}
+
+.base-margin-bottom{
+  margin-bottom: 45px;
+}
+
+.align-center{
+  justify-content: center;
+}
+
+.text-fourteen{
+  font-size: 14px;
+}
+
+.relative {
+  position: relative;
+}

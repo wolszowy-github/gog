@@ -1,0 +1,185 @@
+.page-wrapper{
+  background-color: dimgray;
+}
+
+.main-container{
+  background: url('../img/main-bg.jpg') center/cover;
+  @include breakpoint(large) {
+    height: 100vh;
+  };
+
+  .placeholder{
+    height: 47px;
+  }
+
+  .neg-margin-left{
+    @include breakpoint(large){
+      margin-left: -25px;
+    };
+  }
+
+  .verical-align-bottom{
+    vertical-align: bottom;
+  }
+
+  .clockbox{
+    border: 1px solid gray;
+    width: 160px;
+    height: 35px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 6px -1px rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.1);
+    margin: 0 auto;
+  }
+
+
+
+  .bg-white{
+    background-color: #fff;
+    padding-top: 35px;
+    height: 155px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .logos-bg {
+    @include breakpoint(large) {
+      background: url('../img/logos_bg.jpg') no-repeat top /cover;
+    };
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .level-cross {
+    margin-top: 78px;
+  }
+
+  ///overwrite range
+  .range-wrapper {
+    position: relative;
+  }
+
+  .rangeslider{
+    height: 12px;
+  }
+
+  .rangeslider__handle{
+      position: relative;
+      width: 17px;
+      height: 33px;
+      background: url('../img/handle.png');
+      border-radius: 0;
+      box-shadow: none;
+      z-index: 1;
+      border: 0;
+    }
+
+    .rangeslider__handle::after{
+      content: unset;
+    }
+
+    .rangeslider__fill{
+      background: linear-gradient(to bottom, rgba(181,206,24,1) 0%,rgba(141,180,4,1) 50%,rgba(141,180,4,1) 52%,rgba(154,188,39,1) 100%);
+    }
+
+    .slider-prices{
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .range-position-fix{
+      margin-top: 8px;
+    }
+
+    .follower {
+      @include breakpoint(medium){
+        position: absolute;
+        top: 25px;
+        transform: translateX(-43%);
+        margin: 0;
+      };
+      height: 55px;
+      width: 222px;
+      background-color: grey;
+      border-radius: 10px;
+      background: linear-gradient(to bottom, rgba(195,195,195,1) 0%,rgba(206,206,206,1) 58%);
+      box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+      margin: 20px auto;
+
+      .the-price{
+        height: 40px;
+        color: #698c00;
+        font-size: 24px;
+        margin: 8px 6px;
+        span{
+          color: #698c00;
+          outline: 0;
+          font-size: 24px;
+        }
+      }
+
+      .checkout-btn {
+        width: 108px;
+        border-radius: 8px;
+        font-size: 14px;
+        height: 38px;
+        cursor: pointer;
+        background: linear-gradient(to bottom, rgba(181,206,24,1) 0%,rgba(141,180,4,1) 50%,rgba(141,180,4,1) 52%,rgba(154,188,39,1) 100%);
+        box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+        margin: 8px 9px;
+        &:active {
+          background: linear-gradient(to bottom,rgba(154,188,39,1) 0%,rgba(141,180,4,1) 50%,rgba(141,180,4,1) 52%, rgba(181,206,24,1) 100%);
+        }
+      }
+    }
+
+    .relative-container {
+      position: relative;
+      &:before {
+      @include breakpoint(medium){
+        content: '';
+      };
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: -16%;
+      transform: translate(-88%, -50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color:  transparent transparent transparent transparent;
+      border-bottom-color: #c2c2c2;
+      border-width: 11px;
+      box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+      }
+    }
+
+    .first-breakpoint, .second-breakpoint{
+        position: absolute;
+        border-radius: 50%;
+        top: -6px;
+        height: 8px;
+        width: 6px;
+        transform: translateX(-100%);
+        .before-wrap  {
+          position: relative;
+          .above-txt{
+            position: absolute;
+            top: -20px;
+            left: 0;
+            transform: translateX(-50%);
+            width: 100px;
+            font-size: 10px;
+          }
+        }
+    }
+
+    [data-follower-input]{
+      display: none;
+    }
+
+    .sample-wrapper{
+      margin-top: 50px;
+    }
+///////////////////////////////////////// range end
+}
