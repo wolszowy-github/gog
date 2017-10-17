@@ -31,6 +31,10 @@ gulp.task('webserver', function() {
     }));;
 });
 
-gulp.task('default', ['sass', 'webserver'], function() {
+// gulp.task('default', ['sass', 'webserver'], function() {
+//   gulp.watch(['scss/**/*.scss'], ['sass']);
+// });
+
+gulp.task('default', ['sass'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
 });

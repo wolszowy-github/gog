@@ -5,7 +5,7 @@
 .main-container{
   background: url('../img/main-bg.jpg') center/cover;
   @include breakpoint(large) {
-    height: 100vh;
+    min-height: 1000px;
   };
 
   .placeholder{
@@ -54,7 +54,6 @@
     margin-top: 78px;
   }
 
-  ///overwrite range
   .range-wrapper {
     position: relative;
   }
@@ -97,8 +96,13 @@
         top: 25px;
         transform: translateX(-43%);
         margin: 0;
+        width: 127px;
       };
-      height: 55px;
+
+      @include breakpoint(large){
+        width: 222px;
+      }
+
       width: 222px;
       background-color: grey;
       border-radius: 10px;
@@ -136,7 +140,7 @@
     .relative-container {
       position: relative;
       &:before {
-      @include breakpoint(medium){
+      @include breakpoint(large){
         content: '';
       };
       display: block;
@@ -181,5 +185,58 @@
     .sample-wrapper{
       margin-top: 50px;
     }
-///////////////////////////////////////// range end
+
+    .info-left, .info-right {
+      position: relative;
+      &:before{
+        content: '';
+        height: 1px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        position: absolute;
+        background-color: gray;
+      }
+
+    }
+
+    .info-right {
+      &:before {
+        width: 80%;
+      }
+
+      &:after{
+        content: 'Games sold so far';
+        top: -18px;
+        left: 50%;
+        text-align: center;
+        font-size: 12px;
+        font-family: "OpenSansRegular";
+        transform: translate(-50%, 50%);
+        position: absolute;
+        width: 144px;
+        height: 15px;
+        background: url('../img/main-bg.jpg') center/cover
+      }
+    }
+
+    .info-left {
+      &:before {
+        width: 80%;
+      }
+
+      &:after{
+        content: 'Goodies available for free with Divinity Bundle';
+        top: -18px;
+        left: 50%;
+        text-align: center;
+        font-size: 12px;
+        font-family: "OpenSansRegular";
+        transform: translate(-50%, 50%);
+        position: absolute;
+        width: 303px;
+        height: 15px;
+        background: url('../img/main-bg.jpg') center/cover
+      }
+    }
 }

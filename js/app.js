@@ -64,12 +64,13 @@ onSlide: function(position, value) {
       function changeInfo(check, checkPath, img, imgPath) {
 
         function cutPath(img, path) {
+
           img.attr('src', img.attr('src').split("/")[0] + path);
+
         }
 
         cutPath(check, checkPath);
         cutPath(img, imgPath);
-
 
       }
 
@@ -100,8 +101,8 @@ price.on('keyup', function(e) {
     $(this).html().length === 2 && $(this).html().indexOf('.') === -1 && e.keyCode != 8 ||
     $(this).html().length === 4 && $(this).html().indexOf('.') !== -1 && e.keyCode != 8) {
       followerInput.val($(this).html())
-    inputRange.val(followerInput.val()).change();
-    placeCaretAtEnd( document.getElementById("content"));
+      inputRange.val(followerInput.val()).change();
+      placeCaretAtEnd( document.getElementById("content"));
   }
 
 });
